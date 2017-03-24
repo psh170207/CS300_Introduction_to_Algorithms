@@ -26,6 +26,7 @@ fo = open("./output.txt","w") # open the file "output.txt".
 l = fi.readlines()
 
 num = int(l[0]) # number of test cases.
+fo.writelines(str(num)+"\n") # first line of "output.txt".
 runtimes=[] # list for runtimes.
 
 for i in range(1,2*num+1,2):    # 1 to 2n+1 with step of 2.
@@ -48,8 +49,8 @@ for i in range(1,2*num+1,2):    # 1 to 2n+1 with step of 2.
 sum = 0
 for runtime in runtimes:
     sum = sum+runtime
-C=sum/len(runtimes)
-fo.writelines("C = "+str(C)+" sec/input size")
+C=sum/len(runtimes) # asked constant. (proportional constant for O(n))
+fo.writelines(str(C))
 
 fi.close()
 fo.close()
