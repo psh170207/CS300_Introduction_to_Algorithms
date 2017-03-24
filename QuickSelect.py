@@ -1,3 +1,7 @@
+#Team Number : 47
+#Student ID : 20150262 20150326
+#homework number : 3
+#homework file : problem2.py
 import random
 import time
 
